@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="inputdata">
+        <h2 class="heading">Employee managment system</h2>
+        <div class="container">
+            <h3 class="subhead">Add/Update Employee</h3>
+            <div class="names">
+                <div class="fname-labels">
+                    <label for="fname">First Name :</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="lname-labels">
+                    <label for="lname">Last Name : </label>
+
+                    <input type="text" id="lname" name="lname">
+                </div>
+            </div>
+            <div class="depp">
+                <lable class="dept">Department :</lable>
+                <input type="text" class="department" id="dept">
+            </div>
+            <div class="sall">
+                <lable class="sala">Salary :</lable>
+                <input type="number" class="salary" id="salary">
+            </div>
+            <div class="btn" id="btn1">
+                <button class="submit">Save Employee</button>
+            </div>
+        </div>
+    </section>
+    <section class="tdata">
+        <div class="container">
+            <h3 class="subhead">Employee List</h3>
+            <table>
+                <thead>
+                    <tr class="table-head">
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
