@@ -9,11 +9,21 @@
                 salary: salary
             };
 
-            const employees = JSON.parse(localStorage.getItem('employees')) || [];
-            employees.push(employee);
-            localStorage.setItem('employees', JSON.stringify(employees));
-            alert('Employee data saved successfully!');
-            populatedata();
+            if (employee.fullname.trim() === '' || employee.department.trim() === '' || employee.salary.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+            else if (isNaN(employee.salary) || Number(employee.salary) <= 0) {
+                alert('Please enter a valid positive number for salary.');
+                return;
+            }
+            else {
+                const employees = JSON.parse(localStorage.getItem('employees')) || [];
+                employees.push(employee);
+                localStorage.setItem('employees', JSON.stringify(employees));
+                populatedata();
+            }
+
         });
         // populatedata in html page
         function populatedata() {
